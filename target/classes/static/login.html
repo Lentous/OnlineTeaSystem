@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+  body{
+    background-color: lightcyan;
+  }
+  form{
+    background-color: lightcyan;
+  }
+</style>
+<body>
+<center>
+  <h1>用户登录</h1>
+  <!--
+    正常请求登录页面的路径:
+    http://localhost:8080/login.html
+
+    如果我们在服务器上修改了页面内容，服务器也重启了，浏览器也在登录页面这里刷新了
+    但是在浏览器上鼠标邮件选择"查看网页源代码"时仍然看不到刚刚修改后的内容，这通常
+    就是因为浏览器缓存问题(浏览器没有真的去服务端再次下载页面)
+    解决办法，修改浏览器请求当前页面地址
+    http://localhost:8080/login.html?1=1
+
+  -->
+  <form action="/loginUser" method="get">
+    <table border="1">
+      <tr>
+        <td>用户名</td>
+        <td><input type="text" name="username"></td>
+      </tr>
+      <tr>
+        <td>密码</td>
+        <td><input type="password" name="password"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><input type="submit" value="登录"></td>
+      </tr>
+    </table>
+  </form>
+</center>
+</body>
+</html>
